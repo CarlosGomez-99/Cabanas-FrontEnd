@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cabañas</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <strong>Cabañas</strong>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="capa-img"></div>
+                <img src="img/photocabinone.jpg">
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Alquiler Cabañas.</h1>
+                        <p>Cabañas con la mejor vista a su disposición.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="capa-img"></div>
+                <img src="img/photocabintwo.jpg">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Las mejores calificaciones en internet.</h1>
+                        <p>5 estrellas en calificación por nuestros usuarios.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="capa-img"></div>
+                <img src="img/photocabinthree.jpg">
+                <div class="container">
+                    <div class="carousel-caption text-center">
+                        <h1>¡Te Esperamos!</h1>
+                        <p>Con gusto atenderemos tu solicitud.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="album py-2 bg-light">
+        <div class="container">
+            <ul class="nav nav-pills nav-fill" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-cabanas-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-cabanas" type="button" role="tab" aria-controls="pills-cabanas"
+                        aria-selected="true">Cabañas</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-categoria-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-categoria" type="button" role="tab" aria-controls="pills-categoria"
+                        aria-selected="false">Categoria</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-clientes-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-clientes" type="button" role="tab" aria-controls="pills-clientes"
+                        aria-selected="false">Clientes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-mensajes-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-mensajes" type="button" role="tab" aria-controls="pills-mensajes"
+                        aria-selected="false">Mensajes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-adminuser-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-adminuser" type="button" role="tab" aria-controls="pills-adminuser"
+                        aria-selected="false">Usuarios Admin</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-reservation-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-reservation" type="button" role="tab" aria-controls="pills-reservation"
+                        aria-selected="false">Reservaciones</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-reportes-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-reportes" type="button" role="tab" aria-controls="pills-reportes"
+                        aria-selected="false">Reportes</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-cabanas" role="tabpanel"
+                    aria-labelledby="pills-cabanas-tab" tabindex="0">
+                    <div class="table-responsive">
+                        <table id="CabanasTable" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Marca</th>
+                                    <th scope="col">Habitaciones</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Categoria</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaCabana" />
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-categoria" role="tabpanel" aria-labelledby="pills-categoria-tab"
+                    tabindex="0">
+                    <div class="table-responsive">
+                        <table id="CategoriaTable" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaCategoria" />
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-clientes" role="tabpanel" aria-labelledby="pills-clientes-tab"
+                    tabindex="0">
+                    <div class="table-responsive">
+                        <table id="ClientesTable" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Edad</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaClientes" />
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-mensajes" role="tabpanel" aria-labelledby="pills-mensajes-tab"
+                    tabindex="0">
+                    <div class="table-responsive">
+                        <table id="MensajesTable" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mensaje</th>
+                                    <th scope="col">Cabaña</th>
+                                    <th scope="col">Cliente</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaMensajes" />
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-adminuser" role="tabpanel" aria-labelledby="pills-adminuser-tab"
+                    tabindex="0">
+                    <div class="table-responsive">
+                        <table id="AdminUserTable" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Correo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaAdminUsers" />
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-reservation" role="tabpanel"
+                    aria-labelledby="pills-reservation-tab" tabindex="0">
+                    <div class="table-responsive">
+                        <table id="RservationTable" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Fecha Inicio</th>
+                                    <th scope="col">Fecha Devolución</th>
+                                    <th scope="col">Calificación</th>
+                                    <th scope="col">Cabaña</th>
+                                    <th scope="col">Id Cliente</th>
+                                    <th scope="col">Nombre Cliente</th>
+                                    <th scope="col">Correo Cliente</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaReservaciones" />
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-reportes" role="tabpanel" aria-labelledby="pills-reportes-tab"
+                    tabindex="0">
+                    <div class="table-responsive">
+
+                        <label class="form-label" style="min-width: 100%;">
+                            <h1>Conteo de Reservas</h1>
+                        </label>
+
+                        <label class="form-label" style="min-width: 100%;">Rango Fechas:</label>
+                        <input type="text" class="form-control" placeholder="Fecha Inicio - Fecha Fin" name="datefilter"
+                            id="ReportDates" style="min-width: 100%;" value="2020-12-19 - 2021-01-19" readonly>
+
+                        <table id="ReportesTable2" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Total de reservas</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaReporte2" />
+                        </table>
+
+                        <br>
+                        <br>
+                        <br>
+
+                        <label class="form-label" style="min-width: 100%;">
+                            <h1>Conteo de Reservas completadas vs canceladas</h1>
+                        </label>
+                        <table id="ReportesTable3" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Reservas completadas</th>
+                                    <th scope="col">Reservas canceladas</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaReporte3" />
+                        </table>
+
+
+                        <br>
+                        <br>
+                        <br>
+
+                        <label class="form-label" style="min-width: 100%;">
+                            <h1>Top mejores clientes</h1>
+                        </label>
+
+                        <table id="ReportesTable1" class="table table-striped table-sm">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre Cliente</th>
+                                    <th scope="col">Total de reservas</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaReporte1" />
+                        </table>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="btnActualizar" type="button" class="btn btn-secondary">Actualizar</button>
+            <button id="btnCrear" type="button" class="btn btn-primary">Crear</button>
+            <button id="btnEliminar" type="button" class="btn btn-danger">Eliminar</button>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="content-popup"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="Salvar" type="button" class="btn btn-primary"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

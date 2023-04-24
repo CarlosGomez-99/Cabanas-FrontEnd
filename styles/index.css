@@ -1,0 +1,45 @@
+.carousel {
+  margin-bottom: 1rem;
+}
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item .capa-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(black, black);
+  opacity: 0.5;
+}
+.nav-link {
+  color: black;
+}
+.nav-fill .nav-item .nav-link,
+.nav-justified .nav-item .nav-link {
+  color: black;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: black !important;
+  background-color: #ffc107 !important;
+}
+.tab-content > .active {
+  padding: 1em;
+  margin-bottom: 2em;
+}
+#myCarousel div div img {
+  width: 100%;
+  height: 100%;
+}
+.table tbody tr.highlight td {
+  background-color: #ffc1077e;
+}
+.d-flex.justify-content-center > button {
+  width: 10%;
+  min-width: 95px;
+  margin: 0 5%;
+}
